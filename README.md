@@ -12,9 +12,10 @@ This module calculates the percentage of busy apache workers in relation to the 
 of available workers. If a given percentage value is exceeded this module sets the environment variable "OVERLOAD" 
 to "yes". This environment value can be used by rewrite rules or application code to handle the situation.
 
-A typical usecase is e-commerce system which is overloaded because of a advertisment. With this module it is possible to forward users which do not actually 
-own a valid session to a parking page which informs over the overload situation.
-Users with a session (i.e. a shoppingcart) can finish their purchase.
+A typical usecase is e-commerce system which is overloaded because of a advertisment. With this module it is possible 
+to forward users which do not actually own a valid session to a parking page which informs over the overload situation 
+and automatically redirects the user after a few seconds to the desired page.
+Users with a session (i.e. a shoppingcart) can finish their purchase without having long wait times.
 
 
 ## Compile and Install
