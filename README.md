@@ -5,8 +5,8 @@ This module is currently in proof-of-concept state.
 
 A apache module which discovers overload situations.
 In some situations administrators want to prefer certain users of their systems depending on the load situation of the website.
-This module calculates the percentage of busy apache workers in relation to the total number of available workers. If a given percentage value is execeeded
-this module sets the environment variable "OVERLOAD" to "yes". This environment value can be used by rewite rules or application code to handle the situation.
+This module calculates the percentage of busy apache workers in relation to the total number of available workers. If a given percentage value is exceeded
+this module sets the environment variable "OVERLOAD" to "yes". This environment value can be used by rewrite rules or application code to handle the situation.
 
 A typical usecase is e-commerce system which is overloaded because of a advertisment. With this module it is possible to forward users which do not actually 
 own a valid session to a parking page which informs over the overload situation.
