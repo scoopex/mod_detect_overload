@@ -57,21 +57,23 @@ Testing
 -----
 
  * Configure apache to log the modules behavior
-   ```
+ 
+```
 # Configure apache log for detailed information
 # (adds overload state in the last column)
 LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %{OVERLOAD}e %{OVERLOAD_INFO}e" combined_marc
 CustomLog "logs/access_log" combined_marc
-   ```
+```
  * Configure apache workers to handle a highe amount of requests
-   ```
+
+```
 StartServers          2
 MaxClients            10
 MinSpareThreads       5
 MaxSpareThreads       6
 ThreadsPerChild       10
 MaxRequestsPerChild   1000000
-   ```
+```
  * Run apache in debug mode
    ```
    httpd -X
